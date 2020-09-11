@@ -16,9 +16,7 @@ class _TodayTodoState extends State<TodayTodo> {
         onPressed: (){
 
         },
-        child: Icon(
-          Icons.add,
-          size: 40,),
+        child: Icon(Icons.add, size: 40),
       ),
       appBar: AppBar(
       elevation: 0,
