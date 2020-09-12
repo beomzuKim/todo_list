@@ -9,13 +9,6 @@ class _ImportantPageState extends State<ImportantPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        elevation: 5,
-        onPressed: (){
-
-        },
-        child: Icon(Icons.add, size: 40,),
-      ),
       appBar: AppBar(
         elevation: 0,
         title: Text('중요', style: TextStyle(color: Colors.white),),
@@ -23,6 +16,8 @@ class _ImportantPageState extends State<ImportantPage> {
       ),
 
     );
+
+
 
   }
 }

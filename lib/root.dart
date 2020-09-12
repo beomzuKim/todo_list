@@ -21,6 +21,14 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        elevation: 5,
+        onPressed: (){
+          _selectedIndex = 0;
+        },
+        child: Icon(Icons.add, size: 40),
+      ),
+
       body: Center(child: _page[_selectedIndex],),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.blue[700],
@@ -28,16 +36,26 @@ class _RootPageState extends State<RootPage> {
         elevation: 0.0,
         onTap: _onItemTapped,
         currentIndex: _selectedIndex,
-
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.gradient, color: Colors.white,), title: Text('오늘할일', style: TextStyle(color: Colors.white))),
+              icon: Icon(Icons.gradient, color: Colors.white,),
+              title: Text('오늘할일',
+                  style: TextStyle(color: Colors.white))),
+
           BottomNavigationBarItem(
-              icon: Icon(Icons.send, color: Colors.white,), title: Text('끝난할일', style: TextStyle(color: Colors.white))),
+              icon: Icon(Icons.send, color: Colors.white,),
+              title: Text('끝난할일',
+                  style: TextStyle(color: Colors.white))),
+
           BottomNavigationBarItem(
-              icon: Icon(Icons.star_border, color: Colors.white,), title: Text('중요', style: TextStyle(color: Colors.white))),
+              icon: Icon(Icons.star_border, color: Colors.white,),
+              title: Text('중요',
+                  style: TextStyle(color: Colors.white))),
+
           BottomNavigationBarItem(
-              icon: Icon(Icons.settings, color: Colors.white,), title: Text('설정', style: TextStyle(color: Colors.white))),
+              icon: Icon(Icons.settings, color: Colors.white,),
+              title: Text('설정',
+                  style: TextStyle(color: Colors.white))),
         ],
       ),
     );
