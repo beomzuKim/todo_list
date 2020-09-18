@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:todo_list/importantPage.dart';
 import 'package:todo_list/settingPage.dart';
@@ -10,6 +11,9 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
+  final List<String> listItem = <String>[];
+  final List<bool> listCheck = <bool>[];
+
   int _selectedIndex = 0;
   List _page = [
     TodayTodo(),
@@ -20,14 +24,14 @@ class _RootPageState extends State<RootPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(/*
       floatingActionButton: FloatingActionButton(
         elevation: 5,
         onPressed: (){
-          _selectedIndex = 0;
+
         },
         child: Icon(Icons.add, size: 40),
-      ),
+      ),*/
 
       body: Center(child: _page[_selectedIndex],),
       bottomNavigationBar: BottomNavigationBar(
@@ -64,6 +68,12 @@ class _RootPageState extends State<RootPage> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+    });
+  }
+
+  void addItemToList() {
+    setState(() {
+
     });
   }
 }
